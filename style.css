@@ -1,0 +1,211 @@
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  overflow:initial;}
+      .container {flex: 1;}
+      @font-face {font-family: 'iranian_sans';src: url('iranian_sans.ttf') format('truetype');}
+      * {margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          font-family: "iranian_sans";}
+          .navigation {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  background: linear-gradient(35deg, #bb9090, #f79797);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  z-index: 9999;}
+      .navigation ul {display: flex;width: 350px;}
+      .navigation ul li {
+          position: relative;
+          list-style: none;
+          width: 70px;
+          height: 70px;
+          z-index: 1;}
+      .navigation ul li a {
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          text-align: center;
+          font-weight: 500;}
+      .navigation ul li a .icon {
+          position: relative;
+          display: block;
+          line-height: 88px;
+          text-align: center;
+          transition: 0.5s;
+          color: var(--clr);}
+      .navigation ul li.active a .icon {transform: translateY(-37px);}
+      .navigation ul li a .text {
+          position: absolute;
+          color: var(--clr);
+          font-weight: 400;
+          font-size: 0.75em;
+          letter-spacing: 0.05em;
+          transition: 0.5s;
+          opacity: 0;
+          transform: translateY(30px);}
+      .navigation ul li.active a .text {
+          font-family: 'Iranian_Sans';
+          opacity: 1;
+          color: #000000;
+          font-weight: bold;
+          transform: translateY(10px);}
+          #flashcard .product{
+  background: linear-gradient(90deg, #e44747, #ff5d5d);}
+      .indicator {
+          position: absolute;
+          top: -50%;
+          width: 70px;
+          height: 70px;
+          background: linear-gradient(45deg, #64481e, #ff5500);
+          border-radius: 50%;
+          border: 6px solid var(--clr);
+          transition: 0.5s;
+          box-shadow: inset;}
+      .indicator::before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: -22px;
+          width: 20px;
+          height: 20px;
+          background: transparent;
+          border-top-right-radius: 20px;
+          box-shadow: 1px -10px 0 0 var(--clr);}
+      .indicator::after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          right: -22px;
+          width: 20px;
+          height: 20px;
+          background: transparent;
+          border-top-left-radius: 20px;
+          box-shadow: -1px -10px 0 0 var(--clr);}
+      .navigation ul li:nth-child(1).active ~ .indicator {transform: translateX(calc(70px * 0));}
+      .navigation ul li:nth-child(2).active ~ .indicator {transform: translateX(calc(70px * 1));}
+      .navigation ul li:nth-child(3).active ~ .indicator {transform: translateX(calc(70px * 2));}
+      .navigation ul li:nth-child(4).active ~ .indicator {transform: translateX(calc(70px * 3));}
+      .navigation ul li:nth-child(5).active ~ .indicator {transform: translateX(calc(70px * 4));}
+      section {display: none;}
+.dark-mode {
+  background: #333;color: #fff;
+  .navigation{background: linear-gradient(45deg,#e04a4a,#e44747);}}
+  @font-face {font-family: "Iranian_Sans";src: url(Iranian_Sans.ttf);}
+body {font-family:'Iranian_Sans';background:linear-gradient(45deg, #ffe5e5, #f5caca);margin: 0;padding: 0;}
+.profile {text-align: center;
+    background:linear-gradient(#dd7e77,#e48787);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    margin: 20px;}
+.profile img {width: 150px;border-radius: 50%;margin: 10px;}
+.contact a {text-decoration: none;color: #ff0000;margin: 10px;}
+.Progress, .portfolio {background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin: 20px;}
+.project {margin: 20px;text-align: center;}
+.project img {max-width: 100%;border-radius: 10px;}
+.progress {margin-top: 10px;
+    background-color:red ;
+    height: 20px;
+    background-color: #f0f0f0;
+    position: relative;}
+.progress-bar {height: 100%;
+    background-color: red;
+    color: #fff;
+    text-align: center;
+    line-height: 20px;}
+      hr.rounded {border-top: solid #535353;border-radius: 2.5px;}
+hr.hr2{border-top: 3px solid #bbb;border-radius: 5px;}
+  #store .product {font-family: "Iranian_Sans";
+  text-align: center;
+  background:linear-gradient(15deg,#dd7e77,#e04a4a);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin: 20px 50px 20px 20px;}
+#store .product-image {width: 200px;border-radius: 10px;margin: 10px;}
+#store .product-title {font-size: 20px;color: #333;margin: 10px;}
+#store .product-description {font-size: 16px;color: #ffffff;margin: 10px;}
+#store .product-price {font-size: 18px;color: #000000;margin: 10px;}
+#store .buy-button {background-color: #000000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;}
+#flashcard .buy-button:hover {background-color: #1e3c5c;}
+#flashcard .product {font-family: "Iranian_Sans";
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  margin: 20px 50px 20px 20px;}
+#flashcard .product-title {font-size: 20px;color: #333;margin: 10px;}
+#flashcard .buy-button {background-color: #000000;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition:0.3s;}
+#flashcard .buy-button:hover {background-color: #b8351e;}
+.switch {
+margin: 10px;
+position: relative;
+display: inline-block;
+width: 60px;
+height: 34px;}
+.switch input {
+opacity: 0;
+width: 0;
+height: 0;}
+.slider {
+position: absolute;
+cursor: pointer;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: #ccc;
+-webkit-transition: .4s;
+transition: .4s;}
+.slider:before {
+position: absolute;
+content: "";
+height: 26px;
+width: 26px;
+left: 4px;
+bottom: 4px;
+background-color: white;
+-webkit-transition: .4s;
+transition: .4s;}
+input:checked + .slider {
+background-color: #ff0000;}
+input:focus + .slider {box-shadow: 0 0 1px #2196F3;}
+input:checked + .slider:before {
+-webkit-transform: translateX(26px);
+-ms-transform: translateX(26px);
+transform: translateX(26px);}
+.slider.round {border-radius: 34px;}
+.slider.round:before {border-radius: 50%;}
+#h2settings{
+  background-color: #919191;
+  padding: 10px;
+  border-radius: 0px 0px 10px 10px;}
